@@ -99,11 +99,15 @@ tar xzvf jasper-1.900.1.tar.gz
 cd jasper-1.900.1
 GCC_MAJOR="$(gcc -dumpversion | cut -d. -f1)"
 if [ "$GCC_MAJOR" = "15" ]; then
-    CFLAGS="${CFLAGS:-} -std=gnu17 -Wno-error=implicit-function-declaration" ./configure --prefix=$DIR/grib2
+    CC="${DIR}/mpich/bin/mpicc" \
+    CFLAGS="-O2 -fcommon -std=gnu89 -Wno-implicit-function-declaration -Wno-int-conversion -Wno-incompatible-pointer-types -Wno-error" \
+    CPPFLAGS="-I${DIR}/grib2/include" \
+    LDFLAGS="-L${DIR}/grib2/lib" \
+    ./configure --prefix="$DIR/grib2"
 else
-    ./configure --prefix=$DIR/grib2
+    ./configure --prefix="$DIR/grib2"
 fi
-make
+make -j "$WRF_DEP_JOBS"
 make install
 cd ..
 rm -rf jasper* ._jasper-1.900.1
