@@ -1,0 +1,15 @@
+name: Shell Script Check
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check bash syntax
+        run: bash -n *.sh
+      - name: Run ShellCheck
+        run: shellcheck -S error *.sh
