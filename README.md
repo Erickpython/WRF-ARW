@@ -178,15 +178,3 @@ These scripts were built with guidance from official NCAR/MMM documentation:
 * **WRFDA Data Assimilation User's Guide:** [https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_v4/v4.4/users_guide_chap6.html#_Introduction_2](https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_v4/v4.4/users_guide_chap6.html#_Introduction_2)
 
 ```
-
-### Save and Push to GitHub
-
-1. Save the text above as `README.md` in your repository root (`WRF-ARW/README.md`), then stage, commit, and push:
-   ```bash
-   git add README.md
-   git commit -m "Add comprehensive README documenting WRF, WPS, and WRFDA build pipeline"
-   git push
-
-```
-
-*Verification:* Run `git status` to confirm no untracked or leftover files remain, and check your repository page on GitHub to verify `README.md` renders cleanly.
