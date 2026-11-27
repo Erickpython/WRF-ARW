@@ -1,5 +1,6 @@
-```markdown
 # Automated WRF, WPS, and WRFDA Build Suite (`WRF-ARW`)
+
+```markdown
 
 This repository provides automated shell scripts to download, configure, compile, and verify the **Weather Research and Forecasting (WRF-ARW)** model, the **WRF Preprocessing System (WPS)**, and **WRF Data Assimilation (WRFDA)** on Linux using the **GNU (`gcc` / `g++` / `gfortran`)** compiler suite.
 
@@ -11,7 +12,7 @@ These scripts are designed for **GNU/gfortran** compilers and have been tested w
 
 1. **Clone the repository and enter the directory:**
    ```bash
-   git clone [https://github.com/Erickpython/WRF-ARW.git](https://github.com/Erickpython/WRF-ARW.git)
+   git clone https://github.com/Erickpython/WRF-ARW.git
    cd WRF-ARW
 
 ```
