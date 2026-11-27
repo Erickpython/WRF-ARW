@@ -5,7 +5,7 @@
 # Copyright (C) 2021 Free Software Foundation, Inc.
 # This is free software; see the source for copying conditions.  There is NO
 # warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-mkdir $PWD/wrf_dependencies
+mkdir -p $PWD/wrf_dependencies
 DIR=$PWD/wrf_dependencies
 
 # These only need to be set again in new shell environments if using the older make build system
