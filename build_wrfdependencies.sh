@@ -120,7 +120,7 @@ export DIR="$RESOLVED_DIR"
 export NETCDF="\$DIR/netcdf"
 export MPICH="\$DIR/mpich"
 
-export LD_LIBRARY_PATH="\$NETCDF/lib:\$MPICH/lib:\$DIR/grib2/lib:\${LD_LIBRARY_PATH}"
+export LD_LIBRARY_PATH="\$NETCDF/lib:\$MPICH/lib:\$DIR/grib2/lib:\${LD_LIBRARY_PATH:-}"
 export PATH="\$NETCDF/bin:\$MPICH/bin:\${PATH}"
 
 export JASPERLIB="\$DIR/grib2/lib"
