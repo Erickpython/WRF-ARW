@@ -146,8 +146,7 @@ if [ "$GCC_MAJOR" = "15" ]; then
     sed -i 's|^\(CFLAGS_LOCAL[[:space:]]*=.*\)$|\1 -std=gnu17|' configure.wrf
 fi
 
-./compile all_wrfvar >& "$LOG_DIR/wrfda_compile.out"
-cat "$LOG_DIR/wrfda_compile.out"
+./compile all_wrfvar 2>&1 | tee  "$LOG_DIR/wrfda_compile.log"
 
 echo ""
 echo "--- Verifying WRFDA executables ---"

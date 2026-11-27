@@ -99,7 +99,7 @@ tar xzvf jasper-1.900.1.tar.gz
 cd jasper-1.900.1
 GCC_MAJOR="$(gcc -dumpversion | cut -d. -f1)"
 if [ "$GCC_MAJOR" = "15" ]; then
-    CFLAGS="${CFLAGS:-} -std=gnu17" ./configure --prefix=$DIR/grib2
+    CFLAGS="${CFLAGS:-} -std=gnu17 -Wno-error=implicit-function-declaration" ./configure --prefix=$DIR/grib2
 else
     ./configure --prefix=$DIR/grib2
 fi
